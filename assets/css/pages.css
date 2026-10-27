@@ -1,0 +1,79 @@
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, var(--color-sage) 0%, var(--color-bg) 100%);
+  padding-block: var(--space-7) var(--space-8);
+}
+.hero-grid { display: grid; gap: var(--space-7); align-items: center; }
+.hero h1 { margin-bottom: var(--space-5); }
+.hero .lead { margin-bottom: var(--space-6); max-width: 560px; }
+.hero-media { aspect-ratio: 5 / 4; }
+
+/* Page intro banner (inner pages) */
+.page-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: #f3ede2;
+  padding-block: var(--space-8);
+}
+.page-hero h1 { color: #fff; margin-bottom: var(--space-4); }
+.page-hero .lead { color: #e2dccf; max-width: 700px; margin-bottom: 0; }
+.page-hero .eyebrow { color: var(--color-gold); }
+
+/* Two-column split */
+.split { display: grid; gap: var(--space-7); align-items: center; }
+.split-media { aspect-ratio: 4 / 3; }
+
+/* Neema meaning */
+.meaning {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.3rem 1.1rem;
+  margin-bottom: var(--space-4);
+}
+.meaning strong { color: var(--color-accent-dark); }
+
+/* Values list */
+.values-grid { display: grid; gap: var(--space-4); }
+.value-item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-5);
+}
+.value-item .icon { color: var(--color-accent-dark); margin-top: 0.2rem; }
+.value-item h3 { font-size: 1.15rem; margin-bottom: var(--space-1); }
+.value-item p { margin: 0; color: var(--color-text-muted); }
+
+/* Contact */
+.contact-grid { display: grid; gap: var(--space-7); }
+.contact-list { list-style: none; padding: 0; margin: 0 0 var(--space-5); }
+.contact-list li { display: flex; gap: var(--space-4); align-items: flex-start; margin-bottom: var(--space-5); }
+.contact-list .icon-badge { margin: 0; flex: none; }
+.contact-list h3 { font-size: 1.1rem; margin-bottom: var(--space-1); }
+.contact-list p { margin: 0; }
+.form-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: var(--space-6); box-shadow: var(--shadow-sm); }
+.map-placeholder { position: relative; aspect-ratio: 16 / 9; }
+.map-caption { margin-top: var(--space-3); font-size: var(--fs-sm); color: var(--color-text-muted); }
+
+/* Legal / prose */
+.prose { max-width: 760px; }
+.prose h2 { font-size: 1.6rem; margin-top: var(--space-7); }
+.draft-banner { margin-bottom: var(--space-6); }
+
+/* 404 */
+.not-found { text-align: center; padding-block: var(--space-9); }
+.not-found .code { font-family: var(--font-heading); font-size: clamp(4rem, 12vw, 8rem); color: var(--color-accent); line-height: 1; margin-bottom: var(--space-4); }
+.not-found .btn-row { justify-content: center; margin-top: var(--space-5); }
+
+/* Prevent long words (email addresses) from forcing horizontal scroll on small screens */
+.contact-grid > *, .split > *, .hero-grid > * { min-width: 0; }
+.contact-list a, .contact-list p, .footer-contact a { overflow-wrap: anywhere; }
+@media (max-width: 479px) {
+  .form-card { padding: var(--space-5) var(--space-4); }
+}

@@ -1,0 +1,54 @@
+/* Design tokens for Neema Home Care. Change colors, spacing and type here. */
+:root {
+  /* Colors */
+  --color-primary: #1e5b58;
+  --color-primary-dark: #143f3d;
+  --color-primary-light: #2a726d;
+  --color-sage: #e6efea;
+  --color-accent: #b5573a;
+  --color-accent-dark: #974529;
+  --color-gold: #e3b66b;
+  --color-bg: #fbf7f0;
+  --color-bg-alt: #f3ebdf;
+  --color-surface: #ffffff;
+  --color-text: #2b2b2b;
+  --color-text-muted: #55524d;
+  --color-border: #ddd3c3;
+  --color-error: #a52a1f;
+  --color-success: #1d6b3a;
+  --color-focus: #8a3a00;
+
+  /* Typography */
+  --font-heading: "Lora", Georgia, "Times New Roman", serif;
+  --font-body: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  --fs-base: 1.125rem; /* 18px */
+  --fs-sm: 1rem;
+  --fs-lg: 1.25rem;
+  --fs-h4: 1.25rem;
+  --fs-h3: 1.5rem;
+  --fs-h2: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --fs-h1: clamp(2.2rem, 1.6rem + 2.8vw, 3.6rem);
+  --lh-body: 1.7;
+  --lh-heading: 1.2;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6rem;
+
+  /* Layout */
+  --container: 1160px;
+  --gutter: 1.25rem;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow-sm: 0 1px 3px rgba(20, 63, 61, 0.1);
+  --shadow-md: 0 8px 24px rgba(20, 63, 61, 0.12);
+  --header-h: 72px;
+  --transition: 0.25s ease;
+}
