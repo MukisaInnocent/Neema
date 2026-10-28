@@ -317,3 +317,22 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 /* Scroll reveal (applied by animations.js only) */
 .js-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
 .js-reveal.is-visible { opacity: 1; transform: none; }
+
+/* Social links */
+.social-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.social-list--center { justify-content: center; gap: var(--space-4); }
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid currentColor;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.social-list--center .social-link { color: var(--color-primary); }
+.social-list--center .social-link:hover { background: var(--color-primary); color: #fff; }
+.site-footer .social-link { color: #fff; }
+.site-footer .social-link:hover { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-primary-dark); }
