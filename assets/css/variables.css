@@ -1,35 +1,37 @@
 /* Design tokens for Neema Home Care. Change colors, spacing and type here. */
 :root {
-  /* Colors */
-  --color-primary: #1e5b58;
-  --color-primary-dark: #143f3d;
-  --color-primary-light: #2a726d;
-  --color-sage: #e6efea;
-  --color-accent: #b5573a;
-  --color-accent-dark: #974529;
-  --color-gold: #e3b66b;
-  --color-bg: #fbf7f0;
-  --color-bg-alt: #f3ebdf;
+  /* Colors: teal + navy */
+  --color-primary: #0e7f72;
+  --color-primary-dark: #0b2e4a;
+  --color-primary-light: #19a593;
+  --color-sage: #e8f5f2;
+  --color-accent: #0e8274;
+  --color-accent-dark: #0a675c;
+  --color-gold: #6fdccb;
+  --color-navy: #0b2e4a;
+  --color-navy-2: #0f3a5c;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f3f7f7;
   --color-surface: #ffffff;
-  --color-text: #2b2b2b;
-  --color-text-muted: #55524d;
-  --color-border: #ddd3c3;
-  --color-error: #a52a1f;
-  --color-success: #1d6b3a;
-  --color-focus: #8a3a00;
+  --color-text: #1f2a37;
+  --color-text-muted: #4b5563;
+  --color-border: #dbe5e4;
+  --color-error: #b42318;
+  --color-success: #11714a;
+  --color-focus: #0b2e4a;
 
   /* Typography */
-  --font-heading: "Lora", Georgia, "Times New Roman", serif;
-  --font-body: "Nunito Sans", "Segoe UI", Arial, sans-serif;
-  --fs-base: 1.125rem; /* 18px */
+  --font-heading: "Be Vietnam Pro", "Segoe UI", Arial, sans-serif;
+  --font-body: "Open Sans", "Segoe UI", Arial, sans-serif;
+  --fs-base: 1.0625rem; /* 17px */
   --fs-sm: 1rem;
   --fs-lg: 1.25rem;
   --fs-h4: 1.25rem;
   --fs-h3: 1.5rem;
   --fs-h2: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
-  --fs-h1: clamp(2.2rem, 1.6rem + 2.8vw, 3.6rem);
+  --fs-h1: clamp(2.4rem, 1.6rem + 3.4vw, 4.2rem);
   --lh-body: 1.7;
-  --lh-heading: 1.2;
+  --lh-heading: 1.12;
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -45,10 +47,10 @@
   /* Layout */
   --container: 1160px;
   --gutter: 1.25rem;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --shadow-sm: 0 1px 3px rgba(20, 63, 61, 0.1);
-  --shadow-md: 0 8px 24px rgba(20, 63, 61, 0.12);
-  --header-h: 72px;
+  --radius: 12px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 1px 3px rgba(11, 46, 74, 0.08);
+  --shadow-md: 0 8px 24px rgba(11, 46, 74, 0.12);
+  --header-h: 76px;
   --transition: 0.25s ease;
 }

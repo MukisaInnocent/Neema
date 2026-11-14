@@ -52,7 +52,7 @@ Push to `main`, then on GitHub open **Settings > Pages**, set *Source* to **Depl
 
 ## Notes
 - The home page includes one `application/ld+json` block (HomeAndCareService: name, phone, email only). This is data, not executable script.
-- Fonts (Lora, Nunito Sans) load from Google Fonts. For full privacy, self-host them and update the policy.
+- Fonts (Be Vietnam Pro, Open Sans) load from Google Fonts. Theme colors and type are set in `variables.css` and `theme.css`. For full privacy, self-host them and update the policy.
 - Pages were generated with consistent header/footer markup. If you change navigation (including the Services dropdown), update it in every HTML file.
 
 ## Structure
@@ -60,6 +60,7 @@ Push to `main`, then on GitHub open **Settings > Pages**, set *Source* to **Depl
 index.html  about.html  services.html  hourly-care.html  live-in-care.html  healthcare-professionals.html  service-areas.html  why-choose-us.html  careers.html  contact.html
 privacy-policy.html  404.html  robots.txt  sitemap.xml
 assets/css/   variables.css (all design tokens), base.css, components.css, pages.css, responsive.css
+assets/css/theme.css  (teal + navy theme, home page sections; loads last)
 assets/css/glass.css  (careers page glass design)
 assets/js/    main.js (nav, header, smooth scroll, FAQ, year), forms.js, careers-form.js, animations.js
 assets/images/
