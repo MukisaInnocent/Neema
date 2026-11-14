@@ -45,7 +45,7 @@
   .card-grid--4 { grid-template-columns: repeat(4, 1fr); }
   .steps { grid-template-columns: repeat(3, 1fr); }
   .contact-grid { grid-template-columns: 1fr 1.2fr; align-items: start; }
-  .footer-grid { grid-template-columns: 1.4fr 1fr 1.3fr 1fr; }
+  .footer-grid { grid-template-columns: 1.3fr 1fr 1.4fr; }
   .form-grid--2 { grid-template-columns: 1fr 1fr; }
 }
 
@@ -70,4 +70,32 @@
   .primary-nav a { padding: var(--space-2) 0.55rem; font-size: 1rem; }
   .header-call { padding-inline: 0.85rem; }
   .header-call span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+}
+
+/* Services dropdown on desktop: floating panel */
+@media (min-width: 900px) {
+  .primary-nav .has-sub { flex-wrap: nowrap; }
+  .sub-toggle { width: 30px; height: 30px; margin-left: -0.35rem; }
+  .primary-nav .sub-menu {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    min-width: 270px;
+    margin: 0;
+    padding: var(--space-2);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: var(--radius);
+    background: rgba(251, 247, 240, 0.92);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    backdrop-filter: blur(18px) saturate(170%);
+    box-shadow: var(--shadow-md);
+    z-index: 120;
+  }
+  .primary-nav .has-sub:hover > .sub-menu,
+  .primary-nav .has-sub:focus-within > .sub-menu { display: block; }
+  .primary-nav .sub-menu a { padding: var(--space-2) var(--space-3); border-radius: var(--radius-sm); border-bottom: 0; white-space: nowrap; }
+  .primary-nav .sub-menu a:hover { background: var(--color-sage); }
+  .primary-nav .sub-menu a[aria-current="page"] { background: var(--color-sage); }
+  /* invisible bridge so the menu doesn't close while the pointer moves down */
+  .primary-nav .has-sub::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 0.6rem; }
 }

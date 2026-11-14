@@ -17,6 +17,7 @@
 .page-hero h1 { color: #fff; margin-bottom: var(--space-4); }
 .page-hero .lead { color: #e2dccf; max-width: 700px; margin-bottom: 0; }
 .page-hero .eyebrow { color: var(--color-gold); }
+.page-hero .btn-row { margin-top: var(--space-6); }
 
 /* Two-column split */
 .split { display: grid; gap: var(--space-7); align-items: center; }

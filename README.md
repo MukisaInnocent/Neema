@@ -31,10 +31,10 @@ Note: `404.html` uses relative asset paths. If your host serves it for deep URLs
   - `assets/images/placeholder-service-area.svg`: Contact page service-area map/graphic
   - `assets/images/placeholder-careers.svg`: Careers page hero (real photo of the Neema caregiving team)
 - [ ] **Founder bio and credentials:** labeled placeholder block on `about.html` ("Meet the team"). Replace or remove.
-- [ ] **Business hours:** placeholder on `contact.html`.
-- [ ] **Service area details:** specific counties/cities placeholder on `contact.html`.
+- [ ] **Office hours:** set to Mon&ndash;Fri 9:00am&ndash;5:00pm, Sat&ndash;Sun closed (footer, `contact.html`, home page JSON-LD). Confirm with the owner.
+- [x] **Service areas:** `service-areas.html` (Seattle, Shoreline, Edmonds, Bellevue, Kirkland, Redmond, Mercer Island, Renton, Kent). Office: 1140 NW Market St, Unit 401, Seattle, WA 98107.
 - [ ] **Privacy policy:** `privacy-policy.html` is a **draft and needs legal review**. Add the effective date.
-- [ ] **Not included on purpose** (add only if true and verifiable): testimonials, statistics, years in business, awards, licenses/certifications, insurance or Medicaid acceptance, staff names, street address.
+- [ ] **Not included on purpose** (add only if true and verifiable): testimonials, statistics, years in business, awards, licenses/certifications, insurance or Medicaid acceptance, staff names.
 - [ ] **Pricing / FAQ answers:** several FAQ answers say "contact us for details". Update in `why-choose-us.html` once specifics are decided.
 
 ## Connecting the contact form to a real backend
@@ -56,11 +56,11 @@ Push to `main`, then on GitHub open **Settings > Pages**, set *Source* to **Depl
 ## Notes
 - The home page includes one `application/ld+json` block (HomeAndCareService: name, phone, email only). This is data, not executable script.
 - Fonts (Lora, Nunito Sans) load from Google Fonts. For full privacy, self-host them and update the policy.
-- Pages were generated with consistent header/footer markup. If you change navigation, update it in every HTML file.
+- Pages were generated with consistent header/footer markup. If you change navigation (including the Services dropdown), update it in every HTML file.
 
 ## Structure
 ```
-index.html  about.html  services.html  live-in-care.html  why-choose-us.html  careers.html  contact.html
+index.html  about.html  services.html  hourly-care.html  live-in-care.html  healthcare-professionals.html  service-areas.html  why-choose-us.html  careers.html  contact.html
 privacy-policy.html  404.html  robots.txt  sitemap.xml
 assets/css/   variables.css (all design tokens), base.css, components.css, pages.css, responsive.css
 assets/css/glass.css  (careers page glass design)

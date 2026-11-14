@@ -34,6 +34,23 @@
     });
   }
 
+  /* Services sub-menu toggle (mobile menu; desktop also opens on hover/focus) */
+  document.querySelectorAll('.sub-toggle').forEach(function (btn) {
+    var menu = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!menu) return;
+    btn.addEventListener('click', function () {
+      var open = btn.getAttribute('aria-expanded') !== 'true';
+      btn.setAttribute('aria-expanded', String(open));
+      menu.classList.toggle('is-open', open);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      }
+    });
+  });
+
   /* Sticky header shadow */
   var header = document.querySelector('.site-header');
   if (header) {
