@@ -24,12 +24,9 @@ Note: `404.html` uses relative asset paths. If your host serves it for deep URLs
 - [ ] **Logo:** `assets/images/logo.svg` (header, dark text) and `assets/images/logo-light.svg` (footer). Keep the same file names, or search/replace. Logo text uses Georgia as a fallback; for a final logo, convert text to outlines.
 - [ ] **Favicon:** `assets/images/favicon.svg` (add PNG/ICO versions if needed for older browsers).
 - [ ] **Social share image:** create `assets/images/og-image.jpg` (1200x630). It is referenced by `og:image` but does not exist yet.
-- [ ] **Placeholder images** (SVG stand-ins; replace with real photos, update the `src` and `alt`):
-  - `assets/images/placeholder-hero.svg`: home page hero (caregiver with an older adult at home)
-  - `assets/images/placeholder-about.svg`: home page intro and About page story
-  - `assets/images/placeholder-aging-in-place.svg`: Services, "Aging in Place" section
+- [x] **Photos:** `assets/images/caregiver-*.jpg` (supplied by the client). Confirm each photo is licensed for commercial use before launch.
+- [ ] **Remaining placeholder images** (SVG stand-ins; replace with real photos, update the `src` and `alt`):
   - `assets/images/placeholder-service-area.svg`: Contact page service-area map/graphic
-  - `assets/images/placeholder-careers.svg`: Careers page hero (real photo of the Neema caregiving team)
 - [ ] **Founder bio and credentials:** labeled placeholder block on `about.html` ("Meet the team"). Replace or remove.
 - [ ] **Office hours:** set to Mon&ndash;Fri 9:00am&ndash;5:00pm, Sat&ndash;Sun closed (footer, `contact.html`, home page JSON-LD). Confirm with the owner.
 - [x] **Service areas:** `service-areas.html` (Seattle, Shoreline, Edmonds, Bellevue, Kirkland, Redmond, Mercer Island, Renton, Kent). Office: 1140 NW Market St, Unit 401, Seattle, WA 98107.
