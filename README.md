@@ -19,7 +19,8 @@ All paths are relative, so the site works from any folder or static host.
 Note: `404.html` uses relative asset paths. If your host serves it for deep URLs (e.g. `/a/b/c`), styles may not load; in that case change the asset links in `404.html` to start with `/`.
 
 ## Placeholder checklist (replace before launch)
-- [ ] **Domain:** replace `https://www.example.com` in every page's `<link rel="canonical">` and `og:url`/`og:image`, in `sitemap.xml` and in `robots.txt`.
+- [x] **Domain:** set to `https://www.neemahomecare.org` (canonical, Open Graph, `sitemap.xml`, `robots.txt`). Register the domain and point DNS at the host before launch.
+- [ ] **Email:** the site uses `info@neemahomecare.org` everywhere. Create this mailbox before launch, or messages and applications will bounce.
 - [ ] **Logo:** `assets/images/logo.svg` (header, dark text) and `assets/images/logo-light.svg` (footer). Keep the same file names, or search/replace. Logo text uses Georgia as a fallback; for a final logo, convert text to outlines.
 - [ ] **Favicon:** `assets/images/favicon.svg` (add PNG/ICO versions if needed for older browsers).
 - [ ] **Social share image:** create `assets/images/og-image.jpg` (1200x630). It is referenced by `og:image` but does not exist yet.
@@ -28,6 +29,7 @@ Note: `404.html` uses relative asset paths. If your host serves it for deep URLs
   - `assets/images/placeholder-about.svg`: home page intro and About page story
   - `assets/images/placeholder-aging-in-place.svg`: Services, "Aging in Place" section
   - `assets/images/placeholder-service-area.svg`: Contact page service-area map/graphic
+  - `assets/images/placeholder-careers.svg`: Careers page hero (real photo of the Neema caregiving team)
 - [ ] **Founder bio and credentials:** labeled placeholder block on `about.html` ("Meet the team"). Replace or remove.
 - [ ] **Business hours:** placeholder on `contact.html`.
 - [ ] **Service area details:** specific counties/cities placeholder on `contact.html`.
@@ -36,7 +38,7 @@ Note: `404.html` uses relative asset paths. If your host serves it for deep URLs
 - [ ] **Pricing / FAQ answers:** several FAQ answers say "contact us for details". Update in `why-choose-us.html` once specifics are decided.
 
 ## Connecting the contact form to a real backend
-The form (`contact.html`) is validated in `assets/js/forms.js`. On submit it currently opens a pre-filled `mailto:` to NEEMAHomeCare26@gmail.com.
+The form (`contact.html`) is validated in `assets/js/forms.js`. On submit it currently opens a pre-filled `mailto:` to info@neemahomecare.org.
 
 Everything that sends data lives in one function, `submitForm(data)`, in `forms.js`. Replace its body with a `fetch` call and return the Promise. The file includes commented examples for:
 - **Formspree:** POST JSON to `https://formspree.io/f/YOUR_FORM_ID`
@@ -45,6 +47,12 @@ Everything that sends data lives in one function, `submitForm(data)`, in `forms.
 
 The success and error messages are shown automatically based on whether the Promise resolves or rejects. If you use a service, also update `privacy-policy.html` ("How the contact form works").
 
+## Careers page
+`careers.html` uses the glass design in `assets/css/glass.css` (frosted panels over soft color orbs, with solid fallbacks for older browsers). The application form is handled by `assets/js/careers-form.js`; like the contact form, it currently opens a pre-filled email to `info@neemahomecare.org`. To connect a real service, replace the body of `submitApplication(data)` (examples in the file).
+
+## Preview on GitHub Pages
+Push to `main`, then on GitHub open **Settings > Pages**, set *Source* to **Deploy from a branch**, branch `main`, folder `/ (root)`. The preview appears at `https://<username>.github.io/<repo>/` within a minute or two.
+
 ## Notes
 - The home page includes one `application/ld+json` block (HomeAndCareService: name, phone, email only). This is data, not executable script.
 - Fonts (Lora, Nunito Sans) load from Google Fonts. For full privacy, self-host them and update the policy.
@@ -52,9 +60,10 @@ The success and error messages are shown automatically based on whether the Prom
 
 ## Structure
 ```
-index.html  about.html  services.html  why-choose-us.html  contact.html
+index.html  about.html  services.html  live-in-care.html  why-choose-us.html  careers.html  contact.html
 privacy-policy.html  404.html  robots.txt  sitemap.xml
 assets/css/   variables.css (all design tokens), base.css, components.css, pages.css, responsive.css
-assets/js/    main.js (nav, header, smooth scroll, FAQ, year), forms.js, animations.js
+assets/css/glass.css  (careers page glass design)
+assets/js/    main.js (nav, header, smooth scroll, FAQ, year), forms.js, careers-form.js, animations.js
 assets/images/
 ```

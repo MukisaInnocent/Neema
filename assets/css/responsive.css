@@ -52,3 +52,22 @@
 @media (min-width: 1100px) {
   .primary-nav ul { gap: var(--space-4); }
 }
+
+/* Mobile quick-action bar: phones and tablets only.
+   The header "Call Now" button is hidden there because the bar replaces it. */
+@media (max-width: 899px) {
+  body { padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  .header-call { display: none; }
+}
+@media (min-width: 900px) {
+  .mobile-cta { display: none; }
+}
+
+/* Six nav links: tighten the header between 900px and 1179px so it fits */
+@media (min-width: 900px) and (max-width: 1179px) {
+  .brand img { width: 150px; }
+  .primary-nav ul { gap: 0; }
+  .primary-nav a { padding: var(--space-2) 0.55rem; font-size: 1rem; }
+  .header-call { padding-inline: 0.85rem; }
+  .header-call span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+}

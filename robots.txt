@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace the domain below with your real domain before launch.
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://www.neemahomecare.org/sitemap.xml

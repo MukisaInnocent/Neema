@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var BUSINESS_EMAIL = 'NEEMAHomeCare26@gmail.com';
+  var BUSINESS_EMAIL = 'info@neemahomecare.org';
 
   var form = document.getElementById('contact-form');
   if (!form) return;

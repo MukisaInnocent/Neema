@@ -336,3 +336,62 @@ fieldset.field { border: 0; margin: 0; padding: 0; min-width: 0; }
 .social-list--center .social-link:hover { background: var(--color-primary); color: #fff; }
 .site-footer .social-link { color: #fff; }
 .site-footer .social-link:hover { background: var(--color-gold); border-color: var(--color-gold); color: var(--color-primary-dark); }
+
+/* Frosted header (all pages) */
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(251, 247, 240, 0.78);
+    -webkit-backdrop-filter: blur(16px) saturate(170%);
+    backdrop-filter: blur(16px) saturate(170%);
+  }
+}
+
+/* Card "learn more" link (home page service cards) */
+.card-link { margin-top: var(--space-4); font-size: var(--fs-sm); text-decoration: none; }
+.card-link .icon { width: 1.1rem; height: 1.1rem; transition: transform var(--transition); }
+.card-link:hover .icon { transform: translateX(3px); }
+
+/* Mobile quick-action bar (glass). Hidden on desktop in responsive.css */
+.mobile-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--gutter) calc(var(--space-3) + env(safe-area-inset-bottom, 0px));
+  background: rgba(251, 247, 240, 0.72);
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 -8px 30px rgba(20, 63, 61, 0.12);
+  -webkit-backdrop-filter: blur(18px) saturate(170%);
+  backdrop-filter: blur(18px) saturate(170%);
+}
+.mobile-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 50px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-dark));
+  box-shadow: 0 6px 16px rgba(20, 63, 61, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+.mobile-cta__btn:hover { color: #fff; }
+.mobile-cta__btn .icon { width: 1.15rem; height: 1.15rem; }
+.mobile-cta__btn--accent {
+  color: var(--color-primary-dark);
+  background: linear-gradient(135deg, #f0cd8c 0%, #e3b66b 45%, #c98a4b 100%);
+  box-shadow: 0 6px 16px rgba(201, 138, 75, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.mobile-cta__btn--accent:hover { color: var(--color-primary-dark); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .mobile-cta { background: rgba(251, 247, 240, 0.97); }
+}
