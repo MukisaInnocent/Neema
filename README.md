@@ -50,6 +50,20 @@ The success and error messages are shown automatically based on whether the Prom
 ## Preview on GitHub Pages
 Push to `main`, then on GitHub open **Settings > Pages**, set *Source* to **Deploy from a branch**, branch `main`, folder `/ (root)`. The preview appears at `https://<username>.github.io/<repo>/` within a minute or two.
 
+## Search engine indexing
+- `sitemap.xml` lists every page with a last-modified date; `robots.txt` points to it. Update `lastmod` when a page changes.
+- Each page has a unique title, description and canonical URL, plus JSON-LD structured data: business details (home page), breadcrumbs (all pages), services (hourly and live-in care) and FAQs (pages with FAQ sections). The FAQ data mirrors the visible questions; keep them in sync.
+- `3afab24f71b8a7b7f1935c598a0674c9.txt` is the IndexNow key (Bing, Yandex and others). Keep it in the site root.
+
+After the site is live:
+1. **Google Search Console** (search.google.com/search-console): add a *Domain* property for `neemahomecare.org`, verify it with the DNS TXT record Google gives you (Hostinger hPanel > Domains > DNS / Nameservers), then submit `https://www.neemahomecare.org/sitemap.xml` under *Sitemaps* and use *URL inspection > Request indexing* for the home page.
+2. **Bing Webmaster Tools** (bing.com/webmasters): sign in and choose *Import from Google Search Console*, or add the site and submit the sitemap.
+3. **IndexNow ping** (tells Bing about all pages at once):
+   ```
+   curl -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json" -d "{\"host\":\"www.neemahomecare.org\",\"key\":\"3afab24f71b8a7b7f1935c598a0674c9\",\"urlList\":[\"https://www.neemahomecare.org/\",\"https://www.neemahomecare.org/services.html\",\"https://www.neemahomecare.org/careers.html\"]}"
+   ```
+4. **Google Business Profile** (business.google.com): create or claim the listing with the same name, address and phone as the site. This matters most for local searches like "home care Seattle".
+
 ## Notes
 - The home page includes one `application/ld+json` block (HomeAndCareService: name, phone, email only). This is data, not executable script.
 - Fonts (Be Vietnam Pro, Open Sans) load from Google Fonts. Theme colors and type are set in `variables.css` and `theme.css`. For full privacy, self-host them and update the policy.

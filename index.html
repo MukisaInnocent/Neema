@@ -7,6 +7,7 @@
   <meta name="description" content="Neema Home Care delivers compassionate, client-centered in-home care across Seattle and Greater Seattle. Call (206) 474-7034 for a free consultation.">
   <link rel="canonical" href="https://www.neemahomecare.org/">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Neema Home Care">
   <meta property="og:title" content="Neema Home Care | Compassionate In-Home Care in Seattle">
   <meta property="og:description" content="Neema Home Care delivers compassionate, client-centered in-home care across Seattle and Greater Seattle. Call (206) 474-7034 for a free consultation.">
@@ -27,21 +28,88 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "HomeAndCareService",
-    "name": "Neema Home Care",
-    "telephone": "+12064747034",
-    "email": "info@neemahomecare.org",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "1140 NW Market St, Unit 401",
-      "addressLocality": "Seattle",
-      "addressRegion": "WA",
-      "postalCode": "98107",
-      "addressCountry": "US"
-    },
-    "areaServed": ["Seattle", "Shoreline", "Edmonds", "Bellevue", "Kirkland", "Redmond", "Mercer Island", "Renton", "Kent"],
-    "openingHours": "Mo-Fr 09:00-17:00",
-    "description": "Compassionate, client-centered home care serving Seattle and Greater Seattle."
+    "@graph": [
+      {
+        "@type": "HomeAndCareService",
+        "@id": "https://www.neemahomecare.org/#organization",
+        "name": "Neema Home Care",
+        "url": "https://www.neemahomecare.org/",
+        "logo": "https://www.neemahomecare.org/assets/images/logo.svg",
+        "image": "https://www.neemahomecare.org/assets/images/caregiver-walk-outdoors.jpg",
+        "telephone": "+1-206-474-7034",
+        "email": "info@neemahomecare.org",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1140 NW Market St, Unit 401",
+          "addressLocality": "Seattle",
+          "addressRegion": "WA",
+          "postalCode": "98107",
+          "addressCountry": "US"
+        },
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Seattle"
+          },
+          {
+            "@type": "City",
+            "name": "Shoreline"
+          },
+          {
+            "@type": "City",
+            "name": "Edmonds"
+          },
+          {
+            "@type": "City",
+            "name": "Bellevue"
+          },
+          {
+            "@type": "City",
+            "name": "Kirkland"
+          },
+          {
+            "@type": "City",
+            "name": "Redmond"
+          },
+          {
+            "@type": "City",
+            "name": "Mercer Island"
+          },
+          {
+            "@type": "City",
+            "name": "Renton"
+          },
+          {
+            "@type": "City",
+            "name": "Kent"
+          }
+        ],
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
+        "description": "Compassionate, client-centered non-medical in-home care serving Seattle and Greater Seattle."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.neemahomecare.org/#website",
+        "url": "https://www.neemahomecare.org/",
+        "name": "Neema Home Care",
+        "publisher": {
+          "@id": "https://www.neemahomecare.org/#organization"
+        }
+      }
+    ]
   }
   </script>
 </head>
